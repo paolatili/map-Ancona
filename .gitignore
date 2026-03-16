@@ -4,8 +4,10 @@ config.js
 # macOS metadata
 .DS_Store
 
+
 # Common ignores (future-proofing)
 node_modules/
 dist/
 build/
+.idea
 *.log
