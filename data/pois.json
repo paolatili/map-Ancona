@@ -30,18 +30,18 @@
   {
     "name": "Osteria Simonetti",
     "category": "Restaurant",
-    "lat": 43.6115,
-    "lng": 13.5163,
-    "address": "Piazza Malatesta 1, 60121 Ancona",
+    "lat": 43.61877489415659,
+    "lng": 13.511356715342316,
+    "address": "Via Simonetti, 2, 60121 Ancona AN, Italy",
     "description": "Classic Anconese trattoria famous for brodetto fish stew.",
     "emoji": "🐟"
   },
   {
     "name": "La Moretta",
     "category": "Restaurant",
-    "lat": 43.6094,
-    "lng": 13.5088,
-    "address": "Via Lata 3, 60121 Ancona",
+    "lat": 43.61963166951795,
+    "lng": 13.511350750778014,
+    "address": "Piazza del Plebiscito, 52, 60121 Ancona AN, Italy",
     "description": "Beloved local tavern with excellent wines and seafood antipasti.",
     "emoji": "🦪"
   },
