@@ -55,11 +55,11 @@
     "emoji": "🍦"
   },
   {
-    "name": "Trattoria del Passetto",
+    "name": "Lagaleria",
     "category": "Restaurant",
-    "lat": 43.6173,
-    "lng": 13.5148,
-    "address": "Via Thaon de Revel 1, 60124 Ancona",
+    "lat": 43.61553999741485,
+    "lng": 13.518876375286236,
+    "address": "Via Antonio Giannelli, 10, 60123 Ancona AN, Italy",
     "description": "Sea-view trattoria near the Passetto beach with grilled fresh fish.",
     "emoji": "🎣"
   },
