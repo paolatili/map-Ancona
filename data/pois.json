@@ -1,0 +1,147 @@
+[
+  {
+    "name": "Ristorante Il Giardino",
+    "category": "Seafood Restaurant",
+    "lat": 43.61593046086667,
+    "lng": 13.525619997331345,
+    "address": "Via Fabio Filzi, 2 / c, 60123 Ancona AN, Italy",
+    "description": "Refined antipasti, pasta & mains with a seafood focus, amid white tablecloths in a 1700s palazzo.",
+    "emoji": "\uD83C\uDF7D\uFE0F"
+  },
+  {
+    "name": "La Degosteria",
+    "category": "Restaurant",
+    "lat": 43.620335165780645,
+    "lng": 13.51097810407529,
+    "address": "Via Ciriaco Pizzecolli, 3, 60121 Ancona AN, Italy",
+    "description": "Restaurant - add more details",
+    "emoji": "\uD83C\uDF7D\uFE0F"
+  },
+  {
+    "name": "Pizzeria Avalon CENTRO",
+    "category": "Restaurant",
+    "lat": 43.618335271188535,
+    "lng": 13.517536866120013,
+    "address": "Via Giacomo Matteotti, 165, 60121 Ancona AN, Italy",
+    "description": "Pizza restaurant",
+    "emoji": "\uD83C\uDF55"
+  },
+
+  {
+    "name": "Osteria Simonetti",
+    "category": "Restaurant",
+    "lat": 43.6115,
+    "lng": 13.5163,
+    "address": "Piazza Malatesta 1, 60121 Ancona",
+    "description": "Classic Anconese trattoria famous for brodetto fish stew.",
+    "emoji": "🐟"
+  },
+  {
+    "name": "La Moretta",
+    "category": "Restaurant",
+    "lat": 43.6094,
+    "lng": 13.5088,
+    "address": "Via Lata 3, 60121 Ancona",
+    "description": "Beloved local tavern with excellent wines and seafood antipasti.",
+    "emoji": "🦪"
+  },
+  {
+    "name": "Rossa Cremeria",
+    "category": "Cafe",
+    "lat": 43.6101,
+    "lng": 13.5129,
+    "address": "Corso Garibaldi 10, 60121 Ancona",
+    "description": "Artisan gelato and cremeria with vibrant flavors right in the heart of the city.",
+    "emoji": "🍦"
+  },
+  {
+    "name": "Trattoria del Passetto",
+    "category": "Restaurant",
+    "lat": 43.6173,
+    "lng": 13.5148,
+    "address": "Via Thaon de Revel 1, 60124 Ancona",
+    "description": "Sea-view trattoria near the Passetto beach with grilled fresh fish.",
+    "emoji": "🎣"
+  },
+  {
+    "name": "Bar del Duca",
+    "category": "Bar",
+    "lat": 43.6085,
+    "lng": 13.5073,
+    "address": "Piazza del Plebiscito, 60121 Ancona",
+    "description": "Historic aperitivo bar overlooking the stunning Piazza del Plebiscito.",
+    "emoji": "🍷"
+  },
+  {
+    "name": "Bar Torino",
+    "category": "Bar",
+    "lat": 43.61842599228409,
+    "lng": 13.51197051534232,
+    "address": "Corso Garibaldi 49, 60121 Ancona",
+    "description": "Popular spot for morning espresso and evening Negroni.",
+    "emoji": "☕"
+  },
+  {
+    "name": "Caffè Giuliani",
+    "category": "Cafe",
+    "lat": 43.6103,
+    "lng": 13.5098,
+    "address": "Corso Garibaldi 40, 60121 Ancona",
+    "description": "Classic café with exceptional pastries and cornetti.",
+    "emoji": "🥐"
+  },
+  {
+    "name": "Passetto Beach & Cliffs",
+    "category": "Attraction",
+    "lat": 43.6180,
+    "lng": 13.5165,
+    "address": "Passetto, 60124 Ancona",
+    "description": "Iconic limestone cliffs with seaside caves and a stunning Adriatic view.",
+    "emoji": "🏖️"
+  },
+  {
+    "name": "Cattedrale di San Ciriaco",
+    "category": "Attraction",
+    "lat": 43.6155,
+    "lng": 13.5215,
+    "address": "Piazzale del Duomo, 60121 Ancona",
+    "description": "12th‑century Romanesque cathedral perched on the Colle Guasco with panoramic views.",
+    "emoji": "⛪"
+  },
+  {
+    "name": "Arco di Traiano",
+    "category": "Attraction",
+    "lat": 43.62548997290298,
+    "lng": 13.50651592883558,
+    "address": "Lungomare Vanvitelli, 60121 Ancona AN, Italy",
+    "description": "Triumphal arch built in 115 AD to honour Emperor Trajan at the ancient port.",
+    "emoji": "🏛️"
+  },
+  {
+    "name": "Museo Archeologico Nazionale delle Marche",
+    "category": "Attraction",
+    "lat": 43.6107,
+    "lng": 13.5168,
+    "address": "Via Ferretti 6, 60121 Ancona",
+    "description": "Impressive collection spanning prehistoric to Roman and Gallic artifacts.",
+    "emoji": "🏺"
+  },
+  {
+    "name": "Piazza del Plebiscito (Piazza del Papa)",
+    "category": "Attraction",
+    "lat": 43.6083,
+    "lng": 13.5062,
+    "address": "Piazza del Plebiscito, 60121 Ancona",
+    "description": "The heart of the old city featuring the Palazzo del Governo and the statue of Pope Clement XII.",
+    "emoji": "🗿"
+  },
+  {
+    "name": "Mole Vanvitelliana",
+    "category": "Attraction",
+    "lat": 43.6220,
+    "lng": 13.5095,
+    "address": "Banchina Giovanni da Chio, 60121 Ancona",
+    "description": "18th‑century pentagonal fortress in the harbour, now hosting exhibitions and events.",
+    "emoji": "🏰"
+  }
+]

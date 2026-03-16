@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ancona — Welcome & Explore the City</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- Three.js 3D canvas background -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- Theme toggle (always-visible, fixed) -->
+<button id="theme-toggle" type="button" title="Toggle light / dark mode" aria-label="Toggle theme">☀️</button>
+
+<div id="app">
+
+  <!-- Sidebar -->
+  <aside id="sidebar">
+
+    <!-- Mobile bottom-sheet handle (hidden on desktop) -->
+    <div id="drawer-handle">
+      <div class="drawer-pill"></div>
+      <div class="drawer-mini-brand">
+        <img class="drawer-mini-icon" src="data/img_1.png" alt="Ancona">
+        <span class="drawer-mini-title">Ancona Explorer</span>
+        <span class="drawer-arrow">▲</span>
+      </div>
+    </div>
+
+    <!-- Branding header -->
+    <div id="brand">
+      <img id="brand-icon" src="data/img_1.png" alt="Ancona">
+      <div>
+        <div id="brand-title">Ancona</div>
+        <div id="brand-sub">Welcome & Explore the City</div>
+      </div>
+    </div>
+
+    <!-- Navigation tabs -->
+    <nav id="tabs">
+      <button class="tab active" data-tab="route">🗺 Route</button>
+      <button class="tab" data-tab="places">🍽 Places</button>
+      <button class="tab" data-tab="attractions">🏛 Sights</button>
+      <button class="tab" data-tab="times">🕐 Times</button>
+    </nav>
+
+    <!-- ROUTE TAB -->
+    <div class="tab-panel active" id="panel-route">
+
+      <div class="section">
+        <label class="field-label">From</label>
+        <div id="from-uni-badge" class="dest-badge" style="display:none">🎓 UNIVPM — Via Brecce Bianche</div>
+        <div class="location-row">
+          <select id="origin-select">
+            <option value="43.61776909183472, 13.516213226754282">Piazza Cavour Bus Stop</option>
+            <option value="43.61709418092007, 13.516880212127724">Piazza Camillo Benso di Cavour</option>
+            <option value="Stazione di Ancona, Ancona">Stazione Ancona</option>
+            <option value="Piazza Roma, Ancona">Piazza Roma</option>
+            <option value="__gps__">📍 My Location</option>
+          </select>
+          <button id="locate-btn" type="button" title="Use my location">📍</button>
+          <button id="pick-map-btn" type="button" title="Pick departure on map">🗺</button>
+        </div>
+      </div>
+
+      <div class="route-dir-row">
+        <div id="dest-badge" class="dest-badge" style="flex:1">
+          🎓 UNIVPM — Via Brecce Bianche
+        </div>
+        <button class="tt-dir-swap" id="route-dir-swap" type="button" title="Swap direction">⇅</button>
+      </div>
+
+      <div id="poi-back-row" class="chip-row" style="display:none">
+        <button class="chip chip-ghost" id="back-to-univpm" type="button">← Back to UNIVPM</button>
+      </div>
+
+      <div class="section">
+        <label class="field-label">Prefer bus line</label>
+        <div class="chip-row">
+          <button class="chip" id="prefer-46" type="button">Bus 46</button>
+          <button class="chip" id="prefer-14" type="button">Bus 1/4</button>
+          <button class="chip chip-ghost" id="clear-preference" type="button">Clear</button>
+        </div>
+      </div>
+
+      <a id="open-in-gmaps" target="_blank" rel="noopener" class="gmaps-link">
+        <span>Open in Google Maps</span> ↗
+      </a>
+
+      <div id="directions-panel">
+        <div class="panel-heading">
+          <span class="panel-heading-icon">🚌</span>
+          <span>Transit Steps</span>
+        </div>
+        <ol id="steps-list"></ol>
+      </div>
+
+    </div>
+
+    <!-- PLACES TAB -->
+    <div class="tab-panel" id="panel-places">
+      <div class="filter-chips">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="restaurant">🍽 Restaurants</button>
+        <button class="filter-chip" data-filter="bar">🍷 Bars</button>
+        <button class="filter-chip" data-filter="cafe">☕ Cafés</button>
+      </div>
+      <div id="places-list" class="poi-list"></div>
+    </div>
+
+    <!-- ATTRACTIONS TAB -->
+    <div class="tab-panel" id="panel-attractions">
+      <div class="section-intro">
+        <p>Discover Ancona's historic landmarks, natural wonders, and cultural gems.</p>
+      </div>
+      <div id="attractions-list" class="poi-list"></div>
+    </div>
+
+    <!-- TIMES TAB -->
+    <div class="tab-panel" id="panel-times">
+      <div class="tt-header">
+        <div>
+          <div class="tt-header-title">Next Departures</div>
+          <div class="tt-header-sub">Bus 46 &amp; 1/4</div>
+        </div>
+        <button id="timetable-refresh" type="button" class="tt-refresh-btn" title="Refresh departures">↻</button>
+      </div>
+      <div class="tt-dir-row">
+        <div class="tt-dir-display" id="tt-dir-display">
+          <span id="tt-dir-from-label">🏙 Center</span>
+          <span class="tt-dir-chevron">→</span>
+          <span id="tt-dir-to-label">🎓 University</span>
+        </div>
+        <button class="tt-dir-swap" id="tt-dir-swap" type="button" title="Swap direction">⇅</button>
+      </div>
+      <div id="timetable-list" class="tt-list">
+        <div class="tt-empty">
+          <div class="tt-empty-icon">🚌</div>
+          <p>Tap ↻ to load upcoming bus times</p>
+        </div>
+      </div>
+      <div id="timetable-updated" class="tt-updated"></div>
+    </div>
+
+  </aside>
+
+  <!-- Map -->
+  <main id="map-container">
+    <div id="map"></div>
+
+    <!-- Walking-route overlay (shown when routing to a POI) -->
+    <div id="poi-route-overlay" class="hidden">
+      <div id="poi-route-header">
+        <span id="poi-route-title">Route</span>
+        <button id="poi-route-close" title="Clear route">✕</button>
+      </div>
+      <ol id="poi-steps-list"></ol>
+    </div>
+
+    <div id="no-key" class="notice hidden">
+      <div class="notice-inner">
+        <div class="notice-icon">🗺</div>
+        <h2>API Key Required</h2>
+        <p>Create <code>config.js</code> from <code>config.example.js</code> with your Google Maps key, then reload.</p>
+        <a id="no-key-gmaps" href="#" target="_blank" rel="noopener" class="gmaps-link">Open in Google Maps ↗</a>
+      </div>
+    </div>
+    <!-- Location status toast -->
+    <div id="location-toast" class="toast hidden"></div>
+  </main>
+
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

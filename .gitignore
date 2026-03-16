@@ -1,0 +1,11 @@
+# Local configuration (do not commit your real API key)
+config.js
+
+# macOS metadata
+.DS_Store
+
+# Common ignores (future-proofing)
+node_modules/
+dist/
+build/
+*.log
