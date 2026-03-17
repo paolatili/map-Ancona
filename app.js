@@ -263,7 +263,7 @@ const CAT_COLORS = {
   /* ══════════════════════════════════
      MAP INIT
      ══════════════════════════════════ */
- /* function initMap() {
+  function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
       center: DEFAULT_CENTER,
       zoom: DEFAULT_ZOOM,
@@ -307,17 +307,8 @@ const CAT_COLORS = {
 
     const elPoiClose = document.getElementById('poi-route-close');
     if (elPoiClose) elPoiClose.addEventListener('click', () => clearPoiRoute());
-  }*/
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: DEFAULT_CENTER,
-    zoom: DEFAULT_ZOOM,
-    mapTypeControl: false,
-    streetViewControl: false,
-    fullscreenControl: true,
-    zoomControl: true,
-  });
-}
+  }
+
   /* ══════════════════════════════════
      UI WIRING
      ══════════════════════════════════ */

@@ -1,0 +1,13 @@
+{
+  "name": "map-ancona",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ancona — transit map and POIs (Render web service with server-injected Google Maps key)",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
