@@ -268,7 +268,6 @@ const CAT_COLORS = {
       center: DEFAULT_CENTER,
       zoom: DEFAULT_ZOOM,
       styles: currentTheme === 'dark' ? MAP_STYLE_DARK : MAP_STYLE_LIGHT,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false,
       streetViewControl: false,
       fullscreenControl: true,
