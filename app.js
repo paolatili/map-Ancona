@@ -268,6 +268,7 @@ const CAT_COLORS = {
       center: DEFAULT_CENTER,
       zoom: DEFAULT_ZOOM,
       styles: currentTheme === 'dark' ? MAP_STYLE_DARK : MAP_STYLE_LIGHT,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false,
       streetViewControl: false,
       fullscreenControl: true,
@@ -1406,19 +1407,24 @@ const CAT_COLORS = {
     const elToggle = document.getElementById('theme-toggle');
     if (elToggle) elToggle.addEventListener('click', toggleTheme);
 
-    if (!window.GMAPS_API_KEY || typeof window.GMAPS_API_KEY !== 'string' || !window.GMAPS_API_KEY.trim()) {
+    const rawKey = window.GMAPS_API_KEY;
+    const key = typeof rawKey === 'string' ? rawKey.trim() : '';
+    const looksLikeKey = /^AIza[0-9A-Za-z_\-]{35}$/.test(key);
+    if (!looksLikeKey || key.toLowerCase() === 'undefined' || key.toLowerCase() === 'null') {
       elNoKey.classList.remove('hidden');
+      const p = elNoKey.querySelector('p');
+      if (p) p.textContent = 'Google Maps API key is missing or invalid for this domain. Configure /api/config.js or config_secret.js.';
       return;
     }
 
     elNoKey.classList.add('hidden');
 
-    loadGoogleMaps(window.GMAPS_API_KEY)
+    loadGoogleMaps(key)
       .then(initMap)
       .catch(() => {
         elNoKey.classList.remove('hidden');
         const p = elNoKey.querySelector('p');
-        if (p) p.textContent = 'Failed to load Google Maps API. Check your key and network.';
+        if (p) p.textContent = 'Failed to load Google Maps API. Check your key, referrer restrictions, billing and network.';
       });
   }
 
